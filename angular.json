@@ -84,9 +84,23 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/styles/main_style.css",
+              "src/assets/styles/responsive.css",
+              "src/assets/css/bootstrap-4.1.2/bootstrap.min.css",
+              "src/assets/plugins/font-awesome-4.7.0/css/font-awesome.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/about.js",
+              "src/assets/js/blog.js",
+              "src/assets/js/contact.js",
+              "src/assets/js/custom.js",
+              "src/assets/js/element.js",
+              "src/assets/js/jquery-3.2.1.min.js",
+              "src/assets/js/single.js",
+              "src/assets/styles/bootstrap-4.1.2/bootstrap.min.js"
+
+            ]
           }
         },
         "lint": {

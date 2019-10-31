@@ -1,0 +1,351 @@
+<body>
+<header class="header">
+  <div class="header_content d-flex flex-row align-items-center justify-content-center">
+    <div class="logo"><a>theLugano</a></div>
+    <!--<nav class="main_nav">-->
+    <!--<ul class="d-flex flex-row align-items-start justify-content-start">-->
+    <!--<li><a class="page-scroll" href="#home">Home</a></li>-->
+    <!--<li><a class="page-scroll" href="#shop">Shop & Free Downloads</a></li>-->
+    <!--<li><a class="page-scroll" href="#servicos">Serviços</a></li>-->
+    <!--<li><a class="page-scroll" href="#sobre">Sobre</a></li>-->
+    <!--<li><a class="page-scroll" href="#contato">Contato</a></li>-->
+    <!--</ul>-->
+    <!--</nav>-->
+    <div class="hamburger ml-auto">
+      <div class="d-flex flex-column align-items-end justify-content-between">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div *ngIf="openEscolhaSeuPacote()" class="container">
+  <div class="row">
+    <div class="col-lg-2">
+      <div id="content">
+        <ul class="timeline">
+          <li class="event" data-date="Passo 1">
+            <p>Escolha seu pacote</p>
+            <!--<p>Get here on time, it's first come first serve.</p>-->
+          </li>
+          <li class="event" data-date="Passo 2">
+            <p>Observações</p>
+            <!--<p>sfasdfsaf.</p>-->
+          </li>
+          <li class="event" data-date="Passo 3">
+            <p>Seus Dados</p>
+            <!--<p>sfasdfsaf.</p>-->
+          </li>
+          <li class="event" data-date="Passo 4">
+            <p>Resumo</p>
+            <!--<p>fsadfadsfa!</p>-->
+          </li>
+          <li class="event" data-date="Passo 5">
+            <p>Forma de Pagamento</p>
+            <!--<p>sdfasdfasdf.</p>-->
+          </li>
+          <li class="event" data-date="Passo 5">
+            <p>Concluído :)</p>
+            <!--<p>sdfasdfasdf.</p>-->
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-10">
+      <div class="titulo">
+        <h1 id="title-block">Escolha seu Pacote</h1>
+      </div>
+      <div class="block">
+        <div class="plan basic">
+          <div class="plan-inner">
+
+            <div class="entry-title">
+              <h3>Express Wash</h3>
+              <div class="price">$50<span>/PER CAR</span>
+              </div>
+            </div>
+            <div class="entry-content">
+              <ul>
+                <li><strong>1x</strong> option 1</li>
+                <li><strong>2x</strong> option 2</li>
+                <li><strong>3x</strong> option 3</li>
+                <li><strong>Free</strong> option 4</li>
+                <li><strong>Unlimited</strong> option 5</li>
+              </ul>
+            </div>
+            <div class="btnCard">
+              <a (click)="btnEscolhaCard('basico')">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="plan standard">
+          <div class="plan-inner">
+            <div class="entry-title">
+              <h3>Super Wash</h3>
+              <div class="price">$75<span>/PER CAR</span>
+              </div>
+            </div>
+            <div class="entry-content">
+              <ul>
+                <li><strong>2x</strong> Free Entrance</li>
+                <li><strong>Free</strong> Snacks</li>
+                <li><strong>Custom</strong> Swags</li>
+                <li><strong>2x</strong> Certificate</li>
+                <li><strong>Free</strong> Wifi</li>
+              </ul>
+            </div>
+            <div class="btnCard">
+              <a (click)="btnEscolhaCard('normal')">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="plan ultimite">
+          <div class="plan-inner">
+            <div class="entry-title">
+              <h3>Unlimited Wash</h3>
+              <div class="price">$100<span>/PER CAR</span>
+              </div>
+            </div>
+            <div class="entry-content">
+              <ul>
+                <li><strong>1x</strong> option 1</li>
+                <li><strong>2x</strong> option 2</li>
+                <li><strong>3x</strong> option 3</li>
+                <li><strong>Free</strong> option 4</li>
+                <li><strong>Unlimited</strong> option 5</li>
+              </ul>
+            </div>
+            <div class="btnCard">
+              <a (click)="btnEscolhaCard('premium')">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="openDetalhes()" class="container">
+  <div class="row">
+    <div class="col-lg-2">
+      <div id="content">
+        <ul class="timeline">
+          <li  [ngClass]="'event escolha'" data-date="Passo 1">
+            <p>Escolha seu pacote</p>
+            <!--<p>Get here on time, it's first come first serve.</p>-->
+          </li>
+          <li [ngClass]="'event'" data-date="Passo 2">
+            <p>Observações</p>
+            <!--<p>sfasdfsaf.</p>-->
+          </li>
+          <li class="event" data-date="Passo 3">
+            <p>Seus Dados</p>
+            <!--<p>sfasdfsaf.</p>-->
+          </li>
+          <li class="event" data-date="Passo 4">
+            <p>Resumo</p>
+            <!--<p>fsadfadsfa!</p>-->
+          </li>
+          <li class="event" data-date="Passo 5">
+            <p>Forma de Pagamento</p>
+            <!--<p>sdfasdfasdf.</p>-->
+          </li>
+          <li class="event" data-date="Passo 5">
+            <p>Concluído :)</p>
+            <!--<p>sdfasdfasdf.</p>-->
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-10">
+      <div class="titulo">
+        <h1 id="title-block">Detalhes</h1>
+      </div>
+      <div class="block">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Bpm (Opcional)</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+            <small id="emailHelp" class="form-text text-muted">Batida por minuto de sua música.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Instrumentos que você gostaria em sua produção (Opcional)</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+            <small id="emailHelp" class="form-text text-muted">Ex: Guitarra, Violão, Baixo e etc..</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Referência de músicas</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+            <small id="emailHelp" class="form-text text-muted">Ex: Tom Mistch: xxxx.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">O que você quer?</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+          </div>
+          <div class="form-group ">
+            <div class="upload-btn-wrapper">
+              <label for="exampleInputPassword1">Tem algum som/vídeo guia à respeito do ritmo? Nos mande :)</label>
+              <br>
+              <button class="btn">Upload a file</button>
+              <input type="file" name="myfile" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn btn-danger">Voltar</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="openSeusDados()" class="container">
+  <div class="row">
+    <div class="col-lg-2">
+      <div id="content">
+        <ul class="timeline">
+          <li class="event" data-date="Passo 1">
+            <p>Escolha seu pacote</p>
+            <!--<p>Get here on time, it's first come first serve.</p>-->
+          </li>
+          <li class="event" data-date="Passo 2">
+            <p>Observações</p>
+            <!--<p>sfasdfsaf.</p>-->
+          </li>
+          <li class="event" data-date="Passo 3">
+            <p>Seus Dados</p>
+            <!--<p>sfasdfsaf.</p>-->
+          </li>
+          <li class="event" data-date="Passo 4">
+            <p>Resumo</p>
+            <!--<p>fsadfadsfa!</p>-->
+          </li>
+          <li class="event" data-date="Passo 5">
+            <p>Forma de Pagamento</p>
+            <!--<p>sdfasdfasdf.</p>-->
+          </li>
+          <li class="event" data-date="Passo 5">
+            <p>Concluído :)</p>
+            <!--<p>sdfasdfasdf.</p>-->
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-10">
+      <div class="titulo">
+        <h1 id="title-block">Seus Dados</h1>
+      </div>
+      <div class="block">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nome</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+            <small id="emailHelp" class="form-text text-muted">Batida por minuto de sua música.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Data de Nascimento</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+            <small id="emailHelp" class="form-text text-muted">Ex: Guitarra, Violão, Baixo e etc..</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+            <small id="emailHelp" class="form-text text-muted">Ex: Tom Mistch: xxxx.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Senha</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+          </div><div class="form-group">
+            <label for="exampleInputPassword1">Confirme a senha</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn btn-danger">Voltar</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<div class="container">-->
+  <!--<div class="row">-->
+    <!--<div class="col-lg-2">-->
+      <!--<div id="content">-->
+        <!--<ul class="timeline">-->
+          <!--<li class="event" data-date="Passo 1">-->
+            <!--<p>Escolha seu pacote</p>-->
+            <!--&lt;!&ndash;<p>Get here on time, it's first come first serve.</p>&ndash;&gt;-->
+          <!--</li>-->
+          <!--<li class="event" data-date="Passo 2">-->
+            <!--<p>Observações</p>-->
+            <!--&lt;!&ndash;<p>sfasdfsaf.</p>&ndash;&gt;-->
+          <!--</li>-->
+          <!--<li class="event" data-date="Passo 3">-->
+            <!--<p>Seus Dados</p>-->
+            <!--&lt;!&ndash;<p>sfasdfsaf.</p>&ndash;&gt;-->
+          <!--</li>-->
+          <!--<li class="event" data-date="Passo 4">-->
+            <!--<p>Resumo</p>-->
+            <!--&lt;!&ndash;<p>fsadfadsfa!</p>&ndash;&gt;-->
+          <!--</li>-->
+          <!--<li class="event" data-date="Passo 5">-->
+            <!--<p>Forma de Pagamento</p>-->
+            <!--&lt;!&ndash;<p>sdfasdfasdf.</p>&ndash;&gt;-->
+          <!--</li>-->
+          <!--<li class="event" data-date="Passo 5">-->
+            <!--<p>Concluído :)</p>-->
+            <!--&lt;!&ndash;<p>sdfasdfasdf.</p>&ndash;&gt;-->
+          <!--</li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-lg-10">-->
+      <!--<div class="titulo">-->
+        <!--<h1 id="title-block">C</h1>-->
+      <!--</div>-->
+      <!--<div class="block">-->
+        <!--<form>-->
+          <!--<div class="form-group">-->
+            <!--<label for="exampleInputEmail1">Nome</label>-->
+            <!--<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">-->
+            <!--<small id="emailHelp" class="form-text text-muted">Batida por minuto de sua música.</small>-->
+          <!--</div>-->
+          <!--<div class="form-group">-->
+            <!--<label for="exampleInputEmail1">Data de Nascimento</label>-->
+            <!--<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">-->
+            <!--<small id="emailHelp" class="form-text text-muted">Ex: Guitarra, Violão, Baixo e etc..</small>-->
+          <!--</div>-->
+          <!--<div class="form-group">-->
+            <!--<label for="exampleInputEmail1">Email</label>-->
+            <!--<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">-->
+            <!--<small id="emailHelp" class="form-text text-muted">Ex: Tom Mistch: xxxx.</small>-->
+          <!--</div>-->
+          <!--<div class="form-group">-->
+            <!--<label for="exampleInputPassword1">Senha</label>-->
+            <!--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">-->
+          <!--</div><div class="form-group">-->
+          <!--<label for="exampleInputPassword1">Confirme a senha</label>-->
+          <!--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">-->
+        <!--</div>-->
+
+          <!--<button type="submit" class="btn btn-primary">Enviar</button>-->
+          <!--<button type="submit" class="btn btn-danger">Voltar</button>-->
+
+        <!--</form>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+
+</body>
+
+
